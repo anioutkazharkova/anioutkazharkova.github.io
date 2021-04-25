@@ -18,21 +18,104 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Anna Zharkova, mobile developer
+email: anioutka-jarkova@yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welcome to my personal website! 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://anioutkazharkova.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: anioutkajarkova
+github_username:  anioutkazharkova
 
 # Build settings
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.22.0"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
+
+
+# Social Sharing
+twitter:
+  username               : &twitter "anioutkajarkova"
+facebook:
+  username               : &facebook "anioutka.jarkova"
+  app_id                 :
+  publisher              :
+og_image                 : "/assets/images/site-logo.png" # Open Graph/Twitter default site image
+# For specifying social profiles, used in _includes/seo.html
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - "https://twitter.com/anioutkajarkova"
+    - "https://www.facebook.com/anioutka.jarkova"
+
+
+# Site Author
+author:
+  name             : Anna Zharkova # *name is a YAML reference pointing to the &anchor earlier
+  avatar           : "/assets/images/annazharkova.jpg"
+  bio              : "Lead mobile developer. Do both *iOS* and *Android*. Fan of *KMM* and *coffee*"
+  location         : "Russia, Barnaul"
+  links:
+    - label: "Medium"
+      icon: "fas fa-fw fa-link"
+      url: "https://anioutkazharkova.medium.com"
+    - label: "Habr"
+      icon: "fas fa-fw fa-link"
+      url: "https://habr.com/ru/users/anioutka/posts/"
+    - label: "Telegram"
+      icon: "fas fa-fw fa-link"
+      url: "https://t.me/prettygeeknotes"  
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/anioutkajarkova"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/anioutkazharkova"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/anioutkajarkova"
+
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/anioutkajarkova"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/anioutkazharkova"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/anioutkajarkova"
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -41,7 +124,9 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
+include: 
+- _pages
+- _talks
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
