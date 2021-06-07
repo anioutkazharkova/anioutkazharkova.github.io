@@ -1,0 +1,56 @@
+---
+layout: splash
+author_profile: false
+description: "My name is Anna Zharkova. Welcome to my personal blog!. Place where we talk about mobile development"
+title: "Anna Zharkova"
+og_title: "Anna Zharkova"
+
+header:
+    overlay_image: "/assets/images/header.jpg"
+    og_image: "/assets/images/og-default-header.jpg"
+excerpt: "<div class='header_box'><div class='author__avatar'><img src='/assets/images/annazharkova.jpg' itemprop='image'></div>
+<div class='social__links'>
+<a href='mailto:anioutkazharkova@gmail.com'><i class='fas fa-envelope' aria-hidden='true'></i></a>
+<a href='https://twitter.com/anioutkajarkova'><i class='fab fa-twitter' aria-hidden='true'></i></a>
+<a href='https://github.com/anioutkazharkova'><i class='fab fa-github' aria-hidden='true'></i></a>
+<a href='https://instagram.com/anioutkajarkova'><i class='fab fa-instagram' aria-hidden='true'></i></a>
+<a href='https://linkedin.com/in/anna-zharkova-56799780'><i class='fab fa-linkedin' aria-hidden='true'></i></a>
+</div>
+</div>"
+
+feature_row:
+  - image_path: assets/images/mobile_dev_thumb.jpg
+    alt: "Blog"
+    title: "Blog"
+    excerpt: "Android, Community and Public Speaking"
+    url: "/blog"
+  - image_path: assets/images/header_talks.jpg
+    alt: "Talks"
+    title: "Talks"
+    excerpt: "Slides &amp; Videos"
+    url: "/talks"
+  - image_path: assets/images/about.jpeg
+    alt: "About"
+    title: "About"
+    excerpt: "Hello! My name is Anna"
+    url: "/about"
+---
+
+<p align="center">
+    All modern mobile: iOS, Android, cross-platform
+</p>
+
+<hr>
+
+{% include feature_row %}
+
+<div class="archive">
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
+</div>
