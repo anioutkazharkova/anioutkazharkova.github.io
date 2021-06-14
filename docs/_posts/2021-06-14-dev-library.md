@@ -7,8 +7,8 @@ author_profile: true
 permalink: /posts/2021-06-14-dev-library/
 
 header:
-    image: "/assets/images/google-dev.png"
-    teaser: "/assets/images/google-dev.png"
+    image: "/assets/images/google-contributor-thumb.png"
+    teaser: "/assets/images/google-contributor-thumb.png"
 ---
 
 Really happy today. Several week ago I read about [Google Dev Library](https://devlibrary.withgoogle.com) program and tried to submit some my samples. I chose Multiplatform-DI library and a sample project with common clean architecture and business-logic and common DI. Today I received a mail that both my samples were added in Dev library into [Android/Kotlin categories](https://devlibrary.withgoogle.com/authors/anioutkazharkova). And I became a Google Dev Library contributor.
